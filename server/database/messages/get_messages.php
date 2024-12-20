@@ -1,5 +1,5 @@
 <?php
-include 'db.php';
+include '../db.php';
 
 $stmt = $pdo->query("SELECT * FROM messages ORDER BY created_at DESC");
 $messages = $stmt->fetchAll(PDO::FETCH_ASSOC);

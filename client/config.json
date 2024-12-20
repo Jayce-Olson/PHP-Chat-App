@@ -1,0 +1,4 @@
+{
+    "get_messages_endpoint": "http://localhost/ChatApp/server/database/messages/get_messages.php",
+    "send_messages_endpoint": "http://localhost/ChatApp/server/database/messages/send_message.php"
+}

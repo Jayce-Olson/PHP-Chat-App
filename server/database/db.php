@@ -1,8 +1,13 @@
 <?php
-$host = '127.0.0.1';
-$db   = 'chatapp';
-$user = 'root'; // Default WAMP username
-$pass = '';     // Default WAMP password (empty)
+require 'vendor/autoload.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+$host = $_ENV['DB_HOST'];
+$db = $_ENV['DB_NAME'];
+$user = $_ENV['DB_USERNAME'];
+$pass = $_ENV['DB_PASSWORD'];
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
