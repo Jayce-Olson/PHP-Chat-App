@@ -1,7 +1,7 @@
 <?php
 include '../db.php';
 
-$stmt = $pdo->query("SELECT * FROM messages ORDER BY created_at DESC");
+$stmt = $pdo->query("SELECT * FROM messages ORDER BY created_at ASC");
 $messages = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 foreach ($messages as $msg) {

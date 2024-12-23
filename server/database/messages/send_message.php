@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (!empty($message)) {
         $stmt = $pdo->prepare("INSERT INTO messages (user_id, message) VALUES (?, ?)");
-        $stmt->execute([$user_id, $encrypted_message]);
+        $stmt->execute([$user_id, $message]);
     }
 }
 ?>

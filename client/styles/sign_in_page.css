@@ -1,0 +1,55 @@
+/* Authentication Section */
+.auth-section {
+    background-color: #23272a;
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.auth-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #7289da;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.auth-signin-btn, .auth-signup-btn {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #7289da;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.auth-signup-btn {
+    background-color: #5865f2;
+    margin-top: 10px;
+}
+
+.auth-signout-btn {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f04747;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
