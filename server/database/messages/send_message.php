@@ -7,8 +7,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $message = $_POST['message'] ?? '';
 
     if (!empty($message)) {
-        $stmt = $pdo->prepare("INSERT INTO messages (user_id, message) VALUES (?, ?)");
-        $stmt->execute([$user_id, $message]);
+        $stmt = $pdo->prepare("INSERT INTO messages (conversation_id, user_id, content) VALUES (?, ?, ?)");
+        try {
+            $stmt->execute([1, 1, $message]);
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
     }
 }
 ?>

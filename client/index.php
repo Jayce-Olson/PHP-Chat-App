@@ -10,29 +10,36 @@ if (!isset($_SESSION['user_id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat Application</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/sign_in_page.css">
     <link rel="stylesheet" href="styles/chat_boxes.css">
     <link rel="stylesheet" href="styles/chat_area.css">
     <link rel="stylesheet" href="styles/chat_sidebar.css">
+    <!-- Firebase -->
+    <script type="module" src="https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/10.3.1/firebase-auth.js"></script>
+    <script type="module" src="scripts/firebase/firebase.js"></script>
+    <!-- JavaScript -->
     <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript" src="scripts/chat_list_item_listener.js"></script>
 </head>
 <body>
     <!-- Authentication Section -->
-    <div class="auth-section" id="auth-page">
-        <div class="auth-form">
+    <div class="auth-container" id="auth-page">
+        <div class="auth-card">
             <h2 class="auth-title">Sign In</h2>
-            <form class="login-form">
-                <input type="email" class="auth-email" placeholder="Email" required />
-                <input type="password" class="auth-password" placeholder="Password" required />
-                <button type="submit" class="auth-signin-btn">Sign In</button>
+            <form class="auth-form" id="auth-form">
+                <input type="email" class="auth-input" placeholder="Email" required />
+                <input type="password" class="auth-input" placeholder="Password" required />
+                <button type="submit" class="auth-btn">Sign In</button>
             </form>
-            <button class="auth-signup-btn">Sign Up</button>
-        </div>
-        <div class="user-section" style="display: none;">
-            <h2 class="user-welcome">Welcome, <span class="user-email"></span></h2>
-            <button class="auth-signout-btn">Sign Out</button>
+            <div class="separator">or</div>
+            <button class="google-btn" id="googleSignIn">
+                <img src="resources/icons/google_icon.webp" alt="Google Icon" class="google-icon" />
+                Sign in with Google
+            </button>
+            <button class="auth-secondary-btn" id="sign-up-btn">Sign Up</button>
         </div>
     </div>
 

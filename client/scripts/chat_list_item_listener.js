@@ -1,4 +1,4 @@
-import conversation from "conversation_class.js";
+//import conversation from "conversation_class.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const chats = {
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
       chatHeader.textContent = chats[chatId];
 
       //conversation.currentConversation =
-      chatBox.innerHTML = `<div>Loading messages for ${chats[chatId]}...</div>`;
+      // chatBox.innerHTML = `<div>Loading messages for ${chats[chatId]}...</div>`;
     });
   });
 });

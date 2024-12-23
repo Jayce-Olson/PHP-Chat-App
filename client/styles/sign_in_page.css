@@ -1,55 +1,132 @@
-/* Authentication Section */
-.auth-section {
-    background-color: #23272a;
-    padding: 20px;
-    border-radius: 10px;
-    width: 350px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #2c2f33;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
 }
 
-.auth-title {
+/* Auth Container */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+/* Auth Card */
+.auth-card {
+    background-color: #23272a;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
     text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Title */
+.auth-title {
+    font-size: 1.8em;
+    font-weight: bold;
     margin-bottom: 20px;
     color: #7289da;
 }
 
-.auth-form {
-    display: flex;
-    flex-direction: column;
-}
-
-.auth-form input {
-    margin-bottom: 15px;
-    padding: 10px;
+/* Input Fields */
+.auth-input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
-}
-
-.auth-signin-btn, .auth-signup-btn {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #7289da;
+    background-color: #40444b;
     color: white;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    font-size: 1em;
 }
 
-.auth-signup-btn {
+.auth-input::placeholder {
+    color: #b9bbbe;
+}
+
+/* Buttons */
+.auth-btn {
+    width: 100%;
+    padding: 12px;
     background-color: #5865f2;
-    margin-top: 10px;
-}
-
-.auth-signout-btn {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #f04747;
     color: white;
+    font-size: 1em;
+    font-weight: bold;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.auth-btn:hover {
+    background-color: #7289da;
+    transform: scale(1.05);
+}
+
+.auth-secondary-btn {
+    margin-top: 15px;
+    width: 100%;
+    padding: 12px;
+    background-color: transparent;
+    color: #5865f2;
+    font-size: 1em;
+    font-weight: bold;
+    border: 2px solid #5865f2;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.auth-secondary-btn:hover {
+    background-color: #5865f2;
+    color: white;
+}
+
+/* Separator */
+.separator {
+    color: #b9bbbe;
+    margin: 15px 0;
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+/* Google Sign-In Button */
+.google-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: white;
+    color: #444;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.google-btn img.google-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.google-btn:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
 }
