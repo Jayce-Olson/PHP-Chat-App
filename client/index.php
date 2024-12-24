@@ -12,10 +12,11 @@ if (!isset($_SESSION['user_id'])) {
     <title>Chat Application</title>
     <!-- CSS -->
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/sign_in_page.css">
-    <link rel="stylesheet" href="styles/chat_boxes.css">
-    <link rel="stylesheet" href="styles/chat_area.css">
-    <link rel="stylesheet" href="styles/chat_sidebar.css">
+    <link rel="stylesheet" href="styles/sign_in_page/sign_in_page.css">
+    <link rel="stylesheet" href="styles/chat_page/chat_boxes.css">
+    <link rel="stylesheet" href="styles/chat_page/chat_area.css">
+    <link rel="stylesheet" href="styles/chat_page/chat_sidebar.css">
+    <link rel="stylesheet" href="styles/chat_page/sign_out_button.css">
     <!-- Firebase -->
     <script type="module" src="https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js"></script>
     <script type="module" src="https://www.gstatic.com/firebasejs/10.3.1/firebase-auth.js"></script>
@@ -48,11 +49,6 @@ if (!isset($_SESSION['user_id'])) {
     <!-- Chat Application Section -->
     <div class="chat-app" id="chat-app" style="display: none;">
 
-        <!-- Header -->
-        <div class="chat-header" id="chat-header">
-            <span>Global Chat</span>
-            <button id="signOutButton" class="sign-out-btn">Sign Out</button>
-        </div>
 
         <!-- Sidebar -->
         <div class="chat-sidebar" id="sidebar"> 
@@ -65,7 +61,12 @@ if (!isset($_SESSION['user_id'])) {
 
         <!-- Chat Area -->
         <div class="chat-area" id="chat-area">
-            <!-- <div class="chat-header" id="chat-header">Global Chat</div> -->
+            <!-- Header -->
+            <div class="chat-header" id="chat-header">
+                <span>Global Chat</span>
+                <button id="signOutButton" class="sign-out-btn">Sign Out</button>
+            </div>
+
             <div id="chatBox" class="chat-box">
                 <!-- Messages will be dynamically loaded here -->
             </div>

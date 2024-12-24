@@ -69,8 +69,9 @@ export const initializeSignInListeners = (auth) => {
   document.getElementById("signOutButton").addEventListener("click", () => {
     signOut(auth)
       .then(() => {
-        document.getElementById("chat-app").style.display = "none";
-        document.getElementById("auth-page").style.display = "block";
+        window.location.reload();
+        // document.getElementById("chat-app").style.display = "none";
+        // document.getElementById("auth-page").style.display = "block";
         // userSignOut()
       })
       .catch((error) => {
