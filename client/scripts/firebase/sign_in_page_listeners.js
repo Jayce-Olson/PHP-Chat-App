@@ -19,6 +19,7 @@ export const initializeSignInListeners = (auth) => {
     signInWithPopup(auth, googleProvider)
       .then((result) => {
         user = result.user;
+        console.log(user);
         userSignIn();
       })
       .catch((error) => {
