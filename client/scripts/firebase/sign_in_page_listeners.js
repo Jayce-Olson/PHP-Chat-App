@@ -9,6 +9,7 @@ import {
   GoogleAuthProvider,
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
+  signOut,
 } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-auth.js";
 
 export const initializeSignInListeners = (auth) => {
@@ -63,6 +64,18 @@ export const initializeSignInListeners = (auth) => {
           alert("Failed to create an account.");
         });
     }
+  });
+
+  document.getElementById("signOutButton").addEventListener("click", () => {
+    signOut(auth)
+      .then(() => {
+        document.getElementById("chat-app").style.display = "none";
+        document.getElementById("auth-page").style.display = "block";
+        // userSignOut()
+      })
+      .catch((error) => {
+        console.error("Error signing out:", error);
+      });
   });
 
   onAuthStateChanged(auth, (user) => {

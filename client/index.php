@@ -43,8 +43,17 @@ if (!isset($_SESSION['user_id'])) {
         </div>
     </div>
 
+
+
     <!-- Chat Application Section -->
     <div class="chat-app" id="chat-app" style="display: none;">
+
+        <!-- Header -->
+        <div class="chat-header" id="chat-header">
+            <span>Global Chat</span>
+            <button id="signOutButton" class="sign-out-btn">Sign Out</button>
+        </div>
+
         <!-- Sidebar -->
         <div class="chat-sidebar" id="sidebar"> 
             <h2 class="chat-title">Chats</h2>
@@ -56,7 +65,7 @@ if (!isset($_SESSION['user_id'])) {
 
         <!-- Chat Area -->
         <div class="chat-area" id="chat-area">
-            <div class="chat-header" id="chat-header">Global Chat</div>
+            <!-- <div class="chat-header" id="chat-header">Global Chat</div> -->
             <div id="chatBox" class="chat-box">
                 <!-- Messages will be dynamically loaded here -->
             </div>
